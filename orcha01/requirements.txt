@@ -1,0 +1,11 @@
+transformers
+accelerate
+fastapi
+uvicorn
+pydantic
+sentence-transformers
+faiss-cpu
+numpy
+scipy
+tqdm
+loguru

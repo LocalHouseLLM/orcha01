@@ -1,0 +1,69 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "orcha01"
+version = "0.1.0"
+description = "High performance modular multi-expert AI orchestrator."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+
+authors = [
+  { name = "LocalHouseLLM" }
+]
+
+keywords = [
+  "ai",
+  "orchestration",
+  "multi-agent",
+  "llm",
+  "routing",
+  "swarm",
+  "experts",
+  "inference"
+]
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Developers",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+
+dependencies = [
+  "transformers>=4.40",
+  "accelerate>=0.30",
+  "pydantic>=2",
+  "sentence-transformers>=2.7",
+  "faiss-cpu>=1.7",
+  "numpy",
+  "scipy",
+  "tqdm",
+  "loguru"
+]
+
+
+[project.optional-dependencies]
+api = [
+  "fastapi",
+  "uvicorn"
+]
+
+
+[project.urls]
+Homepage = "https://github.com/LocalHouseLLM/orcha01"
+Issues = "https://github.com/LocalHouseLLM/orcha01/issues"
+
+
+# setuptools config
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["orcha01*"]
