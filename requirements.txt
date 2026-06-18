@@ -1,0 +1,20 @@
+# ── Core (only hard dependency) ──────────────────────────────────────────────
+pydantic>=2.5,<3
+
+# ── Local model backends ─────────────────────────────────────────────────────
+# Required for OllamaExpert and LocalChatExpert (llama.cpp, LM Studio, vLLM…)
+httpx>=0.27
+
+# ── Web UI + REST API ─────────────────────────────────────────────────────────
+fastapi>=0.110
+uvicorn[standard]>=0.29
+
+# ── YAML config files (LocalModelRegistry.from_config) ───────────────────────
+# PyYAML>=6.0    # uncomment if you use .yaml config files
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+pytest>=8.0
+pytest-asyncio>=0.23
+
+# ── Optional: semantic routing / decomposition ────────────────────────────────
+# sentence-transformers>=2.2   # uncomment to enable use_embeddings=True
